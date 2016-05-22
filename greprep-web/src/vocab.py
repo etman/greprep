@@ -1,10 +1,12 @@
 
 import webapp2
-import words.dictref
+from words.dictref import *
 
 class VocabResourceHandler(webapp2.RequestHandler):
     def get(self):
         with open("data/majortests.json") as f:
             self.response.write(f.read())
 
+    def getInstance(self, word):
+        pass
     

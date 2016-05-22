@@ -14,8 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import webapp2
+import webapp2, logging
 import vocab
+import os, sys
+
+rootdir = os.path.dirname(os.path.abspath(__file__))
+lib = os.path.join(rootdir, 'lib')
+sys.path.append(lib)
+
+logging.info(str(sys.path))
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):

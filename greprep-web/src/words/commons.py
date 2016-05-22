@@ -1,6 +1,6 @@
 # encoding=utf8
 import sys, json, urllib, urllib2, base64
-from BeautifulSoup import BeautifulSoup
+from lib.BeautifulSoup import BeautifulSoup
 
 commonRequestParams = {
 }
