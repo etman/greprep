@@ -1,5 +1,5 @@
 # encoding=utf8
-import sys, json, urllib, urllib2, base64
+import sys, json, urllib, urllib2, base64, logging
 from BeautifulSoup import *
 
 commonRequestParams = {

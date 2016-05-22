@@ -24,8 +24,6 @@ def initialize():
     rootdir = os.path.dirname(os.path.abspath(__file__))
     lib = os.path.join(rootdir, 'lib')
     sys.path.append(lib)
-    
-    logging.info("PYTHONPATH=" + str(sys.path))
 
 initialize()
 
@@ -38,5 +36,6 @@ class MainHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/vocab', vocab.VocabResourceHandler)
+    ('/api/vocab', vocab.VocabListResourceHandler),
+    webapp2.Route(r'/api/vocab/<word:.*>', handler=vocab.VocabResourceHandler)
 ], debug=True)
