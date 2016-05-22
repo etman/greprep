@@ -21,9 +21,9 @@ def initialize():
     reload(sys)
     sys.setdefaultencoding('utf8')
     
+    moduleDirs = ["lib", "restful"]
     rootdir = os.path.dirname(os.path.abspath(__file__))
-    lib = os.path.join(rootdir, 'lib')
-    sys.path.append(lib)
+    sys.path = sys.path + [os.path.join(rootdir, dir) for dir in moduleDirs]
 
 initialize()
 
