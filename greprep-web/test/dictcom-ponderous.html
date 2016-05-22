@@ -1,0 +1,1445 @@
+            return googletag.renderedAdsCount >= googletag.slotsCount;
+        };
+        googletag.pubads().addEventListener('slotRenderEnded', function(data) {
+
+            var slotKey;
+
+            for (slotKey in googletag.slots) {
+                if(googletag.slots[slotKey] == data.slot) {
+                    break;
+                }
+            }
+
+            googletag.adsRenderedInfo.set(slotKey, data.size);
+
+            googletag.renderedAdsCount += 1;
+                            if(googletag.adsLoaded()) {
+                    if (document.createEvent) {
+                        var event = new CustomEvent('gptAdsLoaded');
+                        document.dispatchEvent(event);
+                    } else {
+                        var event = document.createEventObject();
+                        event.eventType = "gptAdsLoaded";
+                        document.fireEvent("ongptAdsLoaded", event);
+                    }
+                }
+                    });
+    });
+</script>
+<script type='text/javascript'>
+    window.dataLayer = window.dataLayer || [];
+
+    dataLayer.push({
+        'event': 'pageview',
+        'device': 'Desktop',
+        'pageName': 'dic',
+        'LDid': '0',
+        'mseg': cookiesManager.getCookieValue("mseg"),
+        'sessionId': cookiesManager.getCookieValue("sid"),
+        'browserId': cookiesManager.getCookieValue("bid")    });
+</script><!-- Begin Quantcast Tag, part 1 -->
+<script type="text/javascript"> 
+  
+  var _qevents = _qevents || [];
+
+  (function() {
+   var elem = document.createElement('script');
+
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);  
+  })();
+</script>
+<!-- End Quantcast Tag, part 1 -->
+<!-- Begin comScore Tag -->
+<script>
+if(typeof UserController === "undefined" || !UserController.isUnder13()) {
+    var _comscore = _comscore || [];
+    _comscore.push({c1: "2", c2: "6034776", c3: "", c4: (new String(window.location)).replace(/\?.*$/, "")});
+    (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+}
+</script>
+<noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=6034776&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "http://www.dictionary.com/browse/ponderous",
+    "potentialAction":
+    { "@type": "ViewAction", "target": "android-app://com.dictionary/http/dictionary.com/search?word=ponderous" }
+}
+</script>    </head>
+    <body >
+            <script>
+    document.body.className += ' js-on';
+</script><!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TXC5GP" height="0" width="0" style="display:none;visibility:hidden">
+    </iframe>
+</noscript>
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+        j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j, f);
+    })(window,document,'script','dataLayer','GTM-TXC5GP');
+</script>
+<!-- End Google Tag Manager -->                <div id="fb-root"></div>
+            <script type="text/javascript">
+    UserController.initBody();
+</script>
+<script type="text/javascript">
+        /**
+     * Redirects user to address from parameter
+     *
+     * @param url
+     * @returns {boolean}
+     */
+    function submitForm(url) {
+        var queryText = document.getElementById('q').value || 'search';
+
+        queryText = encodeURIComponent(queryText);
+
+        url = url.replace('%40%40queryText%40%40', queryText);
+
+                location.href = url;
+        return false;
+    }
+
+    function prepareSearchBox(el) {
+        var dataTerm = el.getAttribute('data-term');
+        var value = el.value;
+        if (!(/(iPad|iPhone|iPod)/g.test(navigator.userAgent))) {
+            el.focus();
+            if (dataTerm == value) {
+                el.select();
+            }
+        }
+    }
+</script>
+<nav class="ham-nav dictionary-nav">
+    <ul>
+        <li class="ham-main-menu"><a href="http://www.dictionary.com/" data-linkid="lxabec" >Dictionary.com</a></li>
+        <li>
+            <ul class="ham-submenu">
+                <li><a href="http://www.dictionary.com/wordoftheday/" data-linkid="1498ik" >Word <i class="wotd-italic">of the</i>  Day</a></li>
+                <li><a href="http://translate.reference.com/" data-linkid="au3zd1" >Translate</a></li>
+                <li><a href="http://www.dictionary.com/fun" data-linkid="yp2k17" >Games</a></li>
+                <li><a href="http://blog.dictionary.com/" data-linkid="t6ehki" >Blog</a></li>
+            </ul>
+        </li>
+                    <li class="ham-main-menu"><a href="http://www.thesaurus.com/" data-linkid="c1drjk" >Thesaurus.com</a></li>
+                <li class="ham-main-menu">
+            <a href="http://www.dictionary.com/apps" data-linkid="jmrau8" >Apps
+            <span class="dicticon-header-apple"></span>
+            <span class="dicticon-header-android"></span>
+            </a>
+        </li>
+        <li class="ham-main-menu">
+            <a href="http://app.dictionary.com/favorites">Favorites
+                <span class="dicticon-header-favourites-star"></span>
+                <span class="ham-favourites-number"></span>
+            </a>
+        </li>
+                    <li class="ham-main-menu user-logged-in"><a href="http://app.dictionary.com/logout?logindest=http%3A%2F%2Fwww.dictionary.com%2Fbrowse%2Fponderous">Log Out</a></li>
+            <li class="ham-main-menu user-logged-out"><a href="http://app.dictionary.com/login?source=header_core&amp;logindest=http%3A%2F%2Fwww.dictionary.com%2Fbrowse%2Fponderous">Log In</a></li>
+            </ul>
+            <div class="social-links">
+            <span class="dicticon-header-social-facebook"></span>
+            <span class="dicticon-header-social-twitter"></span>
+            <span class="dicticon-header-social-instagram"></span>
+            <span class="dicticon-header-social-googleplus"></span>
+        </div>
+        <div class="social-follow">
+            <p>follow Dictionary.com</p>
+        </div>
+    </nav>
+<button class="dicticon-hamburger-menu slide-element"></button>
+<header class="js-header dictionary-header">
+    <div class="header-nav-row">
+        <ul class="header-main-nav">
+                            <li class="nav-active">
+                    <a href="http://www.dictionary.com/" data-linkid="tqks0v" >Dictionary.com</a>
+                </li>
+                            <li >
+                    <a href="http://www.thesaurus.com/" data-linkid="qxnxzj" >Thesaurus.com</a>
+                </li>
+                    </ul>
+        <ul class="header-login-nav">
+                            <li class="user-logged-in account"><a href="http://app.dictionary.com/users/settings">My Account</a></li>
+                <li class="user-logged-in"><a href="http://app.dictionary.com/logout?logindest=http%3A%2F%2Fwww.dictionary.com%2Fbrowse%2Fponderous">Log Out</a></li>
+                <li class="user-logged-out"><a rel="nofollow" href="http://app.dictionary.com/login?source=header_core&amp;logindest=http%3A%2F%2Fwww.dictionary.com%2Fbrowse%2Fponderous">Log In</a></li>
+                    </ul>
+
+            <div class="header-social-links">
+            <span class="dicticon-header-social-facebook"></span>
+            <span class="dicticon-header-social-twitter"></span>
+            <span class="dicticon-header-social-instagram"></span>
+            <span class="dicticon-header-social-googleplus"></span>
+        </div>
+        <a href="http://www.dictionary.com/apps"  class="header-apps-links" data-linkid="dbvvdc" >        <span class="dicticon-header-app-android"></span>
+        <span class="dicticon-header-app-ios"></span>
+        Try Our Apps
+        </a>
+    </div>
+            <div class="header-subnav-row">
+            <div class="header-wrapper-row">
+                <ul class="header-subnav">
+                                            <li >
+                            <a href="http://www.dictionary.com/wordoftheday/" data-linkid="tgrpzq" >Word <i class="wotd-italic">of the</i>  Day</a>
+                        </li>
+                                            <li >
+                            <a href="http://translate.reference.com/" data-linkid="s6ljc3" >Translate</a>
+                        </li>
+                                            <li >
+                            <a href="http://www.dictionary.com/fun" data-linkid="9hf893" >Games</a>
+                        </li>
+                                            <li >
+                            <a href="http://blog.dictionary.com/" data-linkid="prrhwm" >Blog</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    
+    <div class="header-search-row">
+        <div class="header-wrapper-row">
+            <a href="http://www.dictionary.com/" data-linkid="yg487x" >            <img src="http://www.dictionary.com/drc/img/responsive/dcom-logo-8f31c.png" alt='Dictionary.com'/>
+            </a>
+            <form id="main_search" class="header-search-form" action="http://www.dictionary.com/dic">
+                <div class="header-search-wrapper">
+                    <div class="search-filter-nav">
+                        <span class="dicticon-filter"></span>
+                        <span class="filter-item-active" data-filter-action="http://www.dictionary.com/browse/%40%40queryText%40%40">definitions</span>
+                    </div>
+                    <input type="text"
+                           value="ponderous"
+                           autoComplete="off"
+                           autocapitalize="off"
+                           autocorrect="off"
+                           name="q"
+                           class="search-input transparent-text"
+                           id="q"
+                           data-term="ponderous">
+                    <script>
+    (function() {
+        var searchInput = document.getElementById('q');
+        if (searchInput !== null) {
+            if (DARCI.OQR.getValue() !== null) {
+                searchInput.value = DARCI.OQR.getValue();
+                searchInput.select();
+            }
+            searchInput.className = searchInput.className.replace('transparent-text', '');
+        }
+    })();
+</script>                    <input type="hidden" name="s" value="t"/>
+                    <button type="submit" id="search-submit" class="dicticon-search-submit" value=""></button>
+                    <ul class="filter-list filter-hidden">
+                                                    <li class="filter-hidden" data-filter="http://www.dictionary.com/browse/%40%40queryText%40%40">definitions</li>
+                                                    <li class="" data-filter="http://www.thesaurus.com/browse/%40%40queryText%40%40">synonyms</li>
+                                                    <li class="" data-filter="http://translate.reference.com/?query=%40%40queryText%40%40">translations</li>
+                                            </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="social-follow-module">
+    <ul class="social-follow-btns">
+        <li>
+            <div class="fb-like-wrapper">
+                <div class="fb-like" data-href="https://www.facebook.com/dictionarycom" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+            </div>
+        </li>
+        <li>
+            <a class="twitter-follow-button" href="https://twitter.com/dictionarycom" data-show-screen-name="false">Follow @dictionarycom</a>
+        </li>
+        <li>
+            <span class="ig-follow" data-id="17031a6e93" data-handle="igfbdotcom" data-count="true" data-size="medium" data-username="false"></span>
+        </li>
+        <li>
+            <div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/117428481782081853923" data-rel="publisher"></div>
+        </li>
+    </ul>
+    <p>follow Dictionary.com</p>
+</div></header>
+<script type="text/javascript">
+    var DARCI = DARCI || {};
+    DARCI.searchedTerm = typeof DARCI.OQR !== 'undefined' ? DARCI.OQR.getValue() : null;
+    DARCI.searchedTerm = DARCI.searchedTerm !== null ? DARCI.searchedTerm : 'ponderous';
+
+    document.getElementById('main_search').onsubmit = function(e, url) {
+        // if url parameter wasn't passed submitFrom() is called with default parameter, which is searchURL
+        // searchURL is defined and added as a global js option in controller
+        return submitForm(url || searchURL);
+    }
+
+    prepareSearchBox(document.getElementById('q'));
+
+    cookiesManager.setCookie('ReferrerQuery', DARCI.searchedTerm);
+</script>    <div id="header-leaderboard">
+        <div class="leaderboard-ad">
+            <div id="dcomSERPLeaderBoard-728x90"><script type="text/javascript">if(typeof UserController !== "undefined" && !UserController.shouldDisplayAds()){document.getElementById("dcomSERPLeaderBoard-728x90").parentNode.removeChild(document.getElementById("dcomSERPLeaderBoard-728x90"));}else{gptApp.ads.push( function() {googletag.cmd.push(function() { googletag.display("dcomSERPLeaderBoard-728x90"); });});}</script></div>        </div>
+    </div>
+    <div id="fly-out" class="fly-out fly-out-desktop" style="">
+        <a href="http://blog.dictionary.com/spelling-bee/"  style="display:block;" data-linkid="naxf3i" >            <div class="text">
+                What is the "Bee" in "Spelling Bee"?            </div>
+        </a>
+        <button type="button" class="fly-out-close-icon"></button>
+    </div>
+<div class="content-container main-area">
+    <div class="row">
+        <div class="left-rail-container">
+            
+<div class="left-nav-sticky">
+    <div class="left-nav-wrapper">
+        <ul>
+            <li class="left-nav-fav">
+                <button class="favorite-button">Favorite Button</button>
+            </li>
+            <li class="left-nav-cite">
+                <a href="http://www.dictionary.com/#"  id="cite-source-link"  rel="nofollow" data-linkid="dr8lp1" >CITE</a>
+            </li>
+            <li class="left-nav-trans">
+                <a href="http://translate.reference.com/translate?query=ponderous" data-linkid="qnmgro" >Translate</a>
+            </li>
+            <li class="social-share-facebook">
+                <a id="left-nav-button-fb">Facebook</a>
+                <div class="share">Share</div>
+            </li>
+            <li class="social-share-twitter">
+                <a id="left-nav-button-twitter" href="https://twitter.com/share?url=http%3A%2F%2Fwww.dictionary.com%2Fbrowse%2Fponderous&text=Ponderous definition, of great weight; heavy; massive. See more.&via=dictionarycom" target="_blank">Twitter</a>
+                <div class="share">Tweet</div>
+            </li>
+            <li class="social-share-google">
+                <a id="left-nav-button-gp" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.dictionary.com%2Fbrowse%2Fponderous"
+                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false">Google+</a>
+                <div class="share">Share</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+        <div class="center-well-container"  data-linkid='nn1ov4' data-cts='{"linkId":"nn1ov4","infix":"","domain":"dictionary.com","clkpage":"dic","clkmod":"1clk","clksite":"dict","clkld":0}' data-href='http://www.dictionary.com/browse/'>
+
+            <section id="source-luna" data-pm-btn-target=".source-box, .source-meta" class="source-wrapper source-luna is-pm-btn-show pm-btn-spot">
+            <div class="source-box oneClick-area">
+            <section class="luna-box">
+    <header class="main-header oneClick-disabled cts-disabled head-big">
+    <div  class="waypoint-wrapper header-row header-first-row" data-href="source-luna">
+                    <h1 class="head-entry"><span class="me" data-syllable="pon·der·ous">ponderous</span></h1>
+        
+        <div class="audio-wrapper cts-disabled"> <audio> <source src="http://static.sfdict.com/staticrep/dictaudio/lunawav/P06/P0631900.ogg" type="audio/ogg"> <source src="http://static.sfdict.com/staticrep/dictaudio/P06/P0631900.mp3" type="audio/mpeg"> </audio> <div class="speaker"></div></div>            <h3 class="head-entry-variants"></h3>
+            </div>
+
+
+    
+    <div class="header-row header-extras pronounce pronset">
+    <div>
+                    <span class="pron spellpron">[<span class="dbox-bold">pon</span>-der-<span class="dbox-italic">uh</span> s] </span>
+            <span class="pron ipapron">/ˈpɒn dər əs/ </span>
+                            <span class="pre-def-data"> </span>
+            </div>
+            <div>
+            <button class="prontoggle pronounce-button pronounce-Spell-button">Spell</button>
+            <button class="syllable-button syllable-button-off" data-header="1">Syllables</button>
+        </div>
+    </div>
+        <div class="header-row">
+        <ul class="headword-bar-list">
+                            <li>
+                    <a data-navigation-href="source-synonyms">
+                        Synonyms                    </a>
+                </li>
+                            <li>
+                    <a data-navigation-href="source-example-sentences">
+                        Examples                    </a>
+                </li>
+                            <li>
+                    <a data-navigation-href="source-word-origin">
+                        Word Origin                    </a>
+                </li>
+                    </ul>
+    </div>
+
+</header>
+
+
+<div class="deep-link-synonyms">
+    <a href="http://www.thesaurus.com/browse/ponderous" data-linkid="oowy0r" >See more synonyms on Thesaurus.com</a>
+</div>
+    <div class="source-data">
+        <div class="def-list">
+                                        <section class="def-pbk ce-spot" data-collapse-expand='{"target": ".def-set", "type": "def"}'>
+                    <header class="luna-data-header">
+                        <span class="dbox-pg">adjective</span>                    </header>
+
+                                            
+<div class="def-set">
+    <span class="def-number">1.</span>
+    <div class="def-content">
+        of great weight; heavy; massive.    </div>
+</div>
+                                            
+<div class="def-set">
+    <span class="def-number">2.</span>
+    <div class="def-content">
+        awkward or unwieldy:                 <div class="def-block def-inline-example"><span class="dbox-example">He carried a ponderous burden on his back.</span></div>
+                </div>
+</div>
+                                            
+<div class="def-set">
+    <span class="def-number">3.</span>
+    <div class="def-content">
+        dull and labored:                 <div class="def-block def-inline-example"><span class="dbox-example">a ponderous dissertation.</span></div>
+                </div>
+</div>
+                                    </section>
+                    </div>
+
+        <div class="tail-wrapper">
+
+    
+<div class="tail-box tail-type-origin pm-btn-spot" data-pm-btn-target=".tail-content" >
+    <div class="tail-header waypoint-wrapper oneClick-disabled" id="source-word-origin">
+        Origin of <span class="me" data-syllable="pon·der·ous">ponderous</span>        <button class="button-source" type="button">Expand</button>
+    </div>
+    
+        <div class="tail-content "
+         >
+                     <div class="tail-elements">
+                <div class="map-origin">
+    <div class="map-area">
+            <div class="map-origin-language" style="left: 45.522222222222%;bottom: 67.533333333333%;">
+            <div class="dot dot-left dot-bottom "></div>
+            <div class="language-name oneClick-disabled">
+            late Middle English            </div>
+        </div>
+            <div class="map-origin-language" style="right: 53.527777777778%;top: 33.672222222222%;">
+            <div class="dot dot-right dot-top "></div>
+            <div class="language-name oneClick-disabled">
+                            <a class="language-name" href="http://www.dictionary.com/browse/middle-french">Middle French</a>
+                        </div>
+        </div>
+            <div class="map-origin-language" style="left: 49.294444444444%;top: 37.561111111111%;">
+            <div class="dot dot-left dot-top "></div>
+            <div class="language-name oneClick-disabled">
+                            <a class="language-name" href="http://www.dictionary.com/browse/latin">Latin</a>
+                        </div>
+        </div>
+        </div>
+</div>
+
+    <div class="timeline oneClick-disabled">
+
+        <div class="span" style="left:54.809052333805% ; width:3.5360678925035% ;">
+
+            
+                <span class="date start-date"   >1375-1425</span>
+
+            
+        </div>
+
+    </div>
+
+<span class="dbox-roman">1375-1425;</span> <span class="dbox-roman">late Middle English</span> (< <span class="dbox-roman">Middle French</span> <span class="dbox-italic">ponderos, pondereuse</span>) < <span class="dbox-roman">Latin</span> <span class="dbox-italic">ponderōsus.</span> See <a class="dbox-xref dbox-roman" href="http://www.dictionary.com/browse/ponder">ponder</a>, <a class="dbox-xref dbox-roman" href="http://www.dictionary.com/browse/-ous">-ous</a>            </div>
+        
+    </div>
+</div>
+    
+<div class="tail-box tail-type-relf pm-btn-spot" data-pm-btn-target=".tail-content" >
+    <div class="tail-header " >
+        Related forms        <button class="button-source" type="button">Expand</button>
+    </div>
+    
+        <div class="tail-content ce-spot"
+         data-collapse-expand='{"target": ".tail-elements", "type": "supEntry"}'>
+                             <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="pon·der·ous·ly, ">ponderously, </span><span class="dbox-pg">adverb</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="pon·der·ous·ness, ">ponderousness, </span><span class="dbox-bold" data-syllable="pon·der·os·i·ty ">ponderosity </span><span class="pronset"> <div class="audio-wrapper cts-disabled"> <audio> <source src="http://static.sfdict.com/staticrep/dictaudio/lunawav/P06/P0632000.ogg" type="audio/ogg"> <source src="http://static.sfdict.com/staticrep/dictaudio/P06/P0632000.mp3" type="audio/mpeg"> </audio> <div class="speaker"></div></div> <span class="pron spellpron">[pon-d<span class="dbox-italic">uh</span>-<span class="dbox-bold">ros</span>-i-tee] </span> <span class="pron ipapron">/ˌpɒn dəˈrɒs ɪ ti/ </span> (<span class="prontoggle pronounce-inline">Show IPA</span>), </span><span class="dbox-pg">noun</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="non·pon·der·os·i·ty, ">nonponderosity, </span><span class="dbox-pg">noun</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="non·pon·der·ous, ">nonponderous, </span><span class="dbox-pg">adjective</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="non·pon·der·ous·ly, ">nonponderously, </span><span class="dbox-pg">adverb</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="non·pon·der·ous·ness, ">nonponderousness, </span><span class="dbox-pg">noun</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="o·ver·pon·der·ous, ">overponderous, </span><span class="dbox-pg">adjective</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="o·ver·pon·der·ous·ly, ">overponderously, </span><span class="dbox-pg">adverb</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="o·ver·pon·der·ous·ness, ">overponderousness, </span><span class="dbox-pg">noun</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="un·pon·der·ous, ">unponderous, </span><span class="dbox-pg">adjective</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="un·pon·der·ous·ly, ">unponderously, </span><span class="dbox-pg">adverb</span>                    </div>
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="un·pon·der·ous·ness, ">unponderousness, </span><span class="dbox-pg">noun</span>                    </div>
+                        
+    </div>
+</div>
+    
+<div class="tail-box tail-type-synonyms pm-btn-spot" data-pm-btn-target=".tail-content" >
+    <div class="tail-header waypoint-wrapper" id="source-synonyms">
+        Synonyms        <button class="button-source" type="button">Expand</button>
+    </div>
+    
+<div class="deep-link-synonyms">
+    <a href="http://www.thesaurus.com/browse/ponderous" data-linkid="oowy0r" >See more synonyms on Thesaurus.com</a>
+</div>
+        <div class="tail-content ce-spot"
+         data-collapse-expand='{"target": ".tail-elements", "type": "supText"}'>
+                     <div class="tail-elements">
+                <span class="dbox-bold">3. </span>heavy, boring, dreary, plodding, tedious.            </div>
+        
+    </div>
+</div>
+    
+<div class="tail-box tail-type-antonyms pm-btn-spot" data-pm-btn-target=".tail-content" >
+    <div class="tail-header " >
+        Antonyms        <button class="button-source" type="button">Expand</button>
+    </div>
+    
+        <div class="tail-content ce-spot"
+         data-collapse-expand='{"target": ".tail-elements", "type": "supText"}'>
+                     <div class="tail-elements">
+                <span class="dbox-bold">3. </span>lively, exciting.            </div>
+        
+    </div>
+</div>
+    </div>
+    </div>
+</section>
+        </div>
+            <div class="source-meta">
+            Dictionary.com Unabridged<br />Based on the Random House Dictionary, © Random House, Inc. 2016.<br/>
+            <a href="http://www.dictionary.com/cite.html?qh=ponderous&ia=luna" class="source-cite" rel="nofollow">Cite This Source</a>
+        </div>
+    </section>
+
+<section id="source-example-sentences" class="source-wrapper source-example-sentences is-pm-btn-show pm-btn-spot" data-pm-btn-target=".source-box">
+    <div class="source-title">
+        Examples from the Web for <span class="u-headword">ponderous</span>
+        <button class="js-button-source button-source" type="button">Expand</button>
+    </div>
+    <div class="sent-wrap ce-spot" data-collapse-expand='{"target": ".source-box", "type": "sentences_list"}'>
+    
+        <div class="source-box oneClick-area" data-cts='{"linkId":"k4otco","infix":"","domain":"dictionary.com","clkpage":"dic","clkmod":"1clkesp","clksite":"dict","clkld":0}' data-href='http://www.dictionary.com/browse/' data-imp="k4otco">
+                            <div class="source-subtitle oneClick-disabled">Contemporary Examples</div>
+                        <ul>
+                                    <li>
+                        <p class="partner-example-text">
+                            THE GATE OF ANGELS By Penelope Fitzgerald Novels about scientists tend to be <em>ponderous</em>.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='fboxke'>
+                            <a class="partner-example-logo" href="http://www.thedailybeast.com?source=dictionary" target="_blank" rel="nofollow"></a>
+                            <span>
+                                <a href="http://www.thedailybeast.com/articles/2012/08/13/must-read-college-novels-from-lucky-jim-to-pnin.html?source=dictionary" target="_blank" rel="nofollow">Must-Read College Novels: From “Lucky Jim” to “Pnin”</a>
+                            </span>
+                            <span>
+                                <a href="http://www.thedailybeast.com/contributors/sam-munson.html?source=dictionary" target="_blank" rel="nofollow">Sam Munson</a>
+                            </span>
+                            <span class="oneClick-disabled">
+                                August 12, 2012                            </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            My ribs are like a xylophone, and the knobs of my spine stick up like <em>ponderous</em> cairns in the landscape of my back.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='fboxke'>
+                            <a class="partner-example-logo" href="http://www.thedailybeast.com?source=dictionary" target="_blank" rel="nofollow"></a>
+                            <span>
+                                <a href="http://www.thedailybeast.com/articles/2009/02/20/live-nude-girl-bares-all.html?source=dictionary" target="_blank" rel="nofollow">Live Nude Girl Bares All</a>
+                            </span>
+                            <span>
+                                <a href="http://www.thedailybeast.com/contributors/lizzie-stark.html?source=dictionary" target="_blank" rel="nofollow">Lizzie Stark</a>
+                            </span>
+                            <span class="oneClick-disabled">
+                                February 19, 2009                            </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            But the <em>ponderous</em> phrases distracted from the easy accessibility of the clothes.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='fboxke'>
+                            <a class="partner-example-logo" href="http://www.thedailybeast.com?source=dictionary" target="_blank" rel="nofollow"></a>
+                            <span>
+                                <a href="http://www.thedailybeast.com/articles/2012/03/07/paris-fall-fashion-week-ends-with-vuitton-and-kanye.html?source=dictionary" target="_blank" rel="nofollow">Paris Fall Fashion Week Ends With Vuitton and Kanye</a>
+                            </span>
+                            <span>
+                                <a href="http://www.thedailybeast.com/contributors/robin-givhan.html?source=dictionary" target="_blank" rel="nofollow">Robin Givhan</a>
+                            </span>
+                            <span class="oneClick-disabled">
+                                March 6, 2012                            </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            It was a <em>ponderous</em> labyrinth of bolts, locks, and steel doors, making it an almost impregnable fortress.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='fboxke'>
+                            <a class="partner-example-logo" href="http://www.thedailybeast.com?source=dictionary" target="_blank" rel="nofollow"></a>
+                            <span>
+                                <a href="http://www.thedailybeast.com/articles/2014/10/19/the-high-society-bank-robber-of-the-1800s.html?source=dictionary" target="_blank" rel="nofollow">The High Society Bank Robber of the 1800s</a>
+                            </span>
+                            <span>
+                                <a href="http://www.thedailybeast.com/contributors/j-north-conway.html?source=dictionary" target="_blank" rel="nofollow">J. North Conway</a>
+                            </span>
+                            <span class="oneClick-disabled">
+                                October 18, 2014                            </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            Archer plays the lead in a <em>ponderous</em> but thoughtful one-act play penned by her husband, Terry Jastrow.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='fboxke'>
+                            <a class="partner-example-logo" href="http://www.thedailybeast.com?source=dictionary" target="_blank" rel="nofollow"></a>
+                            <span>
+                                <a href="http://www.thedailybeast.com/articles/2014/08/19/anne-archer-women-in-hollywood-are-doomed-forever.html?source=dictionary" target="_blank" rel="nofollow">Anne Archer: Women in Hollywood Are Doomed Forever</a>
+                            </span>
+                            <span>
+                                <a href="http://www.thedailybeast.com/contributors/nico-hines.html?source=dictionary" target="_blank" rel="nofollow">Nico Hines</a>
+                            </span>
+                            <span class="oneClick-disabled">
+                                August 18, 2014                            </span>
+                        </div>
+                    </li>
+                            </ul>
+        </div>
+
+            <div class="source-box oneClick-area" data-cts='{"linkId":"ixxth0","infix":"","domain":"dictionary.com","clkpage":"dic","clkmod":"1clkesp","clksite":"dict","clkld":0}' data-href='http://www.dictionary.com/browse/' data-imp="ixxth0">
+                            <div class="source-subtitle oneClick-disabled">Historical Examples</div>
+                        <ul>
+                                    <li>
+                        <p class="partner-example-text">
+                            "Ay," answered the Governor, lifting his head from the hand he had kissed with <em>ponderous</em> gallantry.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='sl8bq9'>
+                        <span>
+                            <a href="http://www.gutenberg.org/files/2807/2807-h/2807-h.htm" target="_blank" rel="nofollow">To Have and To Hold</a>
+                        </span>
+                        <span class="oneClick-disabled">
+                            Mary Johnston                        </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            There was nothing suave in the colonel's manner, nothing slow or <em>ponderous</em> or courtly.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='sl8bq9'>
+                        <span>
+                            <a href="http://www.gutenberg.org/files/24767/24767-h/24767-h.htm" target="_blank" rel="nofollow">Jack O' Judgment</a>
+                        </span>
+                        <span class="oneClick-disabled">
+                            Edgar Wallace                        </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            Their <em>ponderous</em> weapons allowed of little fencing and parrying, and inflicted wounds which were almost invariably mortal.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='sl8bq9'>
+                        <span>
+                            <a href="http://www.gutenberg.org/files/44308/44308-h/44308-h.htm" target="_blank" rel="nofollow">The Art of War in the Middle Ages A.D. 378-1515</a>
+                        </span>
+                        <span class="oneClick-disabled">
+                            C. W. C. Oman                        </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            The bridge was built of stone, on arches, and was of the most massive and <em>ponderous</em> character.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='sl8bq9'>
+                        <span>
+                            <a href="http://www.gutenberg.org/files/24182/24182-h/24182-h.htm" target="_blank" rel="nofollow">Rollo in London</a>
+                        </span>
+                        <span class="oneClick-disabled">
+                            Jacob Abbott                        </span>
+                        </div>
+                    </li>
+                                    <li>
+                        <p class="partner-example-text">
+                            But over both the great monsters passed, treading them to pulp under the <em>ponderous</em> feet.                        </p>
+                        <div class="partner-example-credentials"  data-linkid='sl8bq9'>
+                        <span>
+                            <a href="http://www.gutenberg.org/files/14087/14087-h/14087-h.htm" target="_blank" rel="nofollow">The Jungle Girl</a>
+                        </span>
+                        <span class="oneClick-disabled">
+                            Gordon Casserly                        </span>
+                        </div>
+                    </li>
+                            </ul>
+        </div>
+    </section><section id="source-ced2" data-pm-btn-target=".source-box, .source-meta" class="source-wrapper source-ced2 is-pm-btn-show pm-btn-spot">
+            <div class="source-title">
+            British Dictionary definitions for <span class="u-headword">ponderous</span>            <button class="button-source" type="button">Expand</button>
+        </div>
+
+            <div class="source-box oneClick-area">
+            
+<header class="main-header oneClick-disabled cts-disabled head-big">
+    <div class="header-row header-first-row">
+                    <h2 class="head-entry"><span class="me">ponderous</span></h2>
+                    </div>
+
+
+    
+            <div class="header-row header-middle-row">
+            <div class="pronounce">
+                <span class="pronset">
+                    <span class="pron ipapron" >/<span class="dbox-pron">ˈpɒndərəs</span>/ </span>
+                </span>
+            </div>
+        </div>
+    </header>
+<div class="source-data ce-spot"
+                        data-collapse-expand='{"target": ".def-coll", "type": "collins"}'>
+    <div class="def-coll">
+        
+
+<div class="def-list">
+            <div class="def-pbk">
+            <span class="dbox-pg">adjective</span>                            <div class="def-set">
+                    <span class="def-number">1.</span>
+                    <div class="def-content">
+                        of great weight; heavy; huge                    </div>
+                </div>
+                                            <div class="def-set">
+                    <span class="def-number">2.</span>
+                    <div class="def-content">
+                        (esp of movement) lacking ease or lightness; awkward, lumbering, or graceless                    </div>
+                </div>
+                                            <div class="def-set">
+                    <span class="def-number">3.</span>
+                    <div class="def-content">
+                        dull or laborious: <span class="dbox-ex">a ponderous oration</span>                    </div>
+                </div>
+                                    </div>
+    </div>
+        
+<div class="tail-wrapper">
+            <div class="tail-box tail-type-relf">
+                            <div class="tail-header">
+                    Derived Forms                </div>
+                        <div class="tail-content">
+                                    <div class="tail-elements">
+                        <span class="dbox-bold" data-syllable="ˈponderously, ">ponderously, </span><span class="dbox-pg">adverb<br/></span><span class="dbox-bold" data-syllable="ˈponderousness, ">ponderousness, </span><span class="dbox-bold">ponderosity </span>(<span class="dbox-pron">ˌpɒndəˈrɒsɪtɪ</span>) <span class="dbox-pg">noun</span>                    </div>
+                            </div>
+        </div>
+            <div class="tail-box tail-type-origin">
+                            <div class="tail-header">
+                    Word Origin                </div>
+                        <div class="tail-content">
+                                    <div class="tail-elements">
+                        C14: from Latin <span class="dbox-italic">ponderōsus</span> of great weight, from <span class="dbox-italic">pondus</span> weight                    </div>
+                            </div>
+        </div>
+    </div>    </div>
+</div>        </div>
+            <div class="source-meta">
+            Collins English Dictionary - Complete & Unabridged 2012 Digital Edition<br /> © William Collins Sons & Co. Ltd. 1979, 1986 © HarperCollins<br />Publishers 1998, 2000, 2003, 2005, 2006, 2007, 2009, 2012<br/>
+            <a href="http://www.dictionary.com/cite.html?qh=ponderous&ia=ced2" class="source-cite" rel="nofollow">Cite This Source</a>
+        </div>
+    </section>
+<section id="source-etymon2" data-pm-btn-target=".source-box, .source-meta" class="source-wrapper source-etymon2 is-pm-btn-show pm-btn-spot">
+            <div class="source-title">
+            Word Origin and History for <span class="u-headword">ponderous</span>            <button class="button-source" type="button">Expand</button>
+        </div>
+
+            <div class="source-box oneClick-area">
+            
+<div class="source-data">
+    
+    <div class="def-list">
+                    <span class="dbox-italic">adj.</span>                        <section class="def-pbk">
+                                    <div class="def-set">
+                            <p>c.1400, "thick;" early 15c., "heavy, weighty, clumsy," from Latin <span class="dbox-italic">ponderosus</span> "of great weight; full of meaning," from <span class="dbox-italic">pondus</span> (genitive <span class="dbox-italic">ponderis</span>) "weight" (see <a class="dbox-xref" href="/browse/pound">pound</a> (n.1)). Meaning "tedious" is first recorded 1704. Related: <span class="dbox-italic">Ponderously</span>; <span class="dbox-italic">ponderousness</span>.</p>
+                    </div>
+                            </section>
+        
+    </div>
+
+</div>        </div>
+            <div class="source-meta">
+            Online Etymology Dictionary, © 2010 Douglas Harper<br/>
+            <a href="http://www.dictionary.com/cite.html?qh=ponderous&ia=etymon2" class="source-cite" rel="nofollow">Cite This Source</a>
+        </div>
+    </section>
+                            <div class="hidden-xs">
+                    <div class="slideshows short-serp-slideshow"
+         data-imp="nqdc8q" data-linkid='nqdc8q' >
+    <h3>Discover our greatest slideshows</h3>
+    <ul class="carousel">
+                        <li class="slide">
+                    <a href="http://www.dictionary.com/slideshows/computer-terms">
+                        <img width="130" height="140" id="slideImg1" src="http://static.sfdict.com/assets/1143-3043716-9.jpg" >
+                    </a>
+                    <div class="title-wrapper">
+                        <h3>
+                            <a class="title-link" href="http://www.dictionary.com/slideshows/computer-terms">The mystery words on your screen</a>
+                        </h3>
+                    </div>
+                </li>                <li class="slide">
+                    <a href="http://www.dictionary.com/slideshows/mom-words">
+                        <img width="130" height="140" id="slideImg2" src="http://static.sfdict.com/assets/4183-8779851-0.jpg" >
+                    </a>
+                    <div class="title-wrapper">
+                        <h3>
+                            <a class="title-link" href="http://www.dictionary.com/slideshows/mom-words">Dear Mom: 5 Adjectives for Mother's...</a>
+                        </h3>
+                    </div>
+                </li>                    <div class="u-clear"></div>                <li class="slide">
+                    <a href="http://www.dictionary.com/slideshows/q-without-u">
+                        <img width="130" height="140" id="slideImg3" src="http://static.sfdict.com/assets/4977-3600084-0.jpg" >
+                    </a>
+                    <div class="title-wrapper">
+                        <h3>
+                            <a class="title-link" href="http://www.dictionary.com/slideshows/q-without-u">Q Without U: 9 Must-Know Terms for...</a>
+                        </h3>
+                    </div>
+                </li>                <li class="slide">
+                    <a href="http://www.dictionary.com/slideshows/death-and-taxes">
+                        <img width="130" height="140" id="slideImg4" src="http://static.sfdict.com/assets/1805-2251644-1.jpg" >
+                    </a>
+                    <div class="title-wrapper">
+                        <h3>
+                            <a class="title-link" href="http://www.dictionary.com/slideshows/death-and-taxes">Death & Taxes: All We Can Do Is...</a>
+                        </h3>
+                    </div>
+                </li>                    <div class="u-clear"></div>    </ul>
+</div>
+                    <div class="blog-container"  data-linkid='mzyvyk'  data-imp="mzyvyk">
+    <h3>Browse more topics on our blog</h3>
+    <ul>
+                    <li>
+                <a href="http://blog.dictionary.com/discreet-and-discrete">What Is the Difference Between Discreet and Discrete?</a>
+                <div class="text">Learn the correct uses of these two commonly confused homophones.</div>
+            </li>
+                    <li>
+                <a href="http://blog.dictionary.com/ampersand">What Character Was Removed from the Alphabet?</a>
+                <div class="text">What mistaken pronunciation gave this character its name? </div>
+            </li>
+                    <li>
+                <a href="http://blog.dictionary.com/apostrophes-101">Apostrophes 101</a>
+                <div class="text">This small mark has two primary uses: to signify possession or omitted letters.</div>
+            </li>
+                    <li>
+                <a href="http://blog.dictionary.com/getting-words-into-dictionaries">How Do I Get a Word into the Dictionary?</a>
+                <div class="text">People invent new words all the time, but which ones actually make it?</div>
+            </li>
+            </ul>
+</div>
+                </div>
+                    </div>
+        <div class="right-rail-container">
+            <div class="constant-content">
+            <section id="wotd-text" class="wotd-module">
+    <header>
+        <h3 class="title icon-wotd">Word of the Day</h3>
+    </header>
+    <div class="content">
+            </div>
+</section><div id="dcomSERPTop-300x250"><script type="text/javascript">if(typeof UserController !== "undefined" && !UserController.shouldDisplayAds()){document.getElementById("dcomSERPTop-300x250").parentNode.removeChild(document.getElementById("dcomSERPTop-300x250"));}else{gptApp.ads.push( function() {googletag.cmd.push(function() { googletag.display("dcomSERPTop-300x250"); });});}</script></div>
+
+<section id="difficulty-box" data-difficulty="48"  data-imp="6ta766">
+    <header>
+        <h3 class="title icon-glasses">Difficulty index for <span class="u-headword">ponderous</span></h3>
+    </header>
+    <div class="content">
+        <div class="difficulty-bar">
+            <div class="difficulty-indicator"></div>
+        </div>
+    </div>  
+    
+        <span class="subtext">Some English speakers likely know this word</span>
+    
+</section><section id="tile-value-box">
+    <header>
+        <h3 class="title icon-cup">Word Value for <span class="u-headword">ponderous</span></h3>
+    </header>
+    <div class="content">
+        <div class="row">
+            <div class="game-scrabble"><span>12</span></div>
+            <div class="game-wwf"><span>15</span></div>
+            
+        </div>
+        <div class="row">
+            <span class="descr_scrabble">Scrabble</span>
+            <span class="descr_wwf">Words With Friends</span>            
+        </div>
+    </div>  
+</section><section class="related-words-box"  data-imp="2ksc1p|6">
+    <header>
+        <h3 class="title">Related Words</h3>
+    </header>
+    <div class="content"  data-linkid='2ksc1p' data-ordinal='1' data-item='1'>
+    <ul class="list-vertical">
+                <li class="size-1">
+                <a href="http://www.dictionary.com/browse/bulky">bulky</a>
+            </li>
+                <li class="size-2">
+                <a href="http://www.dictionary.com/browse/elephantine">elephantine</a>
+            </li>
+                <li class="size-3">
+                <a href="http://www.dictionary.com/browse/heavy-footed">heavy-footed</a>
+            </li>
+                <li class="size-3">
+                <a href="http://www.dictionary.com/browse/hulking">hulking</a>
+            </li>
+                <li class="size-4">
+                <a href="http://www.dictionary.com/browse/lumber">lumber</a>
+            </li>
+                <li class="size-4">
+                <a href="http://www.dictionary.com/browse/ponderosa-pine">ponderosa pine</a>
+            </li>
+            </ul>
+    </div>
+</section>
+            </div>
+                            <div class="right-rail-sticky-box">
+                    <div class="rightRailMiddleAd"><div id="dcomSERPMid-300x250"><script type="text/javascript">if(typeof UserController !== "undefined" && !UserController.shouldDisplayAds()){document.getElementById("dcomSERPMid-300x250").parentNode.removeChild(document.getElementById("dcomSERPMid-300x250"));}else{gptApp.ads.push( function() {googletag.cmd.push(function() { googletag.display("dcomSERPMid-300x250"); });});}</script></div></div>
+                </div>
+                <section class="right-rail-nearby-words">
+    <h3 class="title">Nearby words for ponderous</h3>
+    <div class="nearby-words-outer-box">
+        <button type="button" class="nearby-move-button nearby-prev"></button>
+        <div class="nearby-words-inner-box"  data-linkid='lno2pu' data-ordinal='1' data-item='1'>
+            <ul class="list-vertical">
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponce-de-leon--juan">ponce de león, juan</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponceau">ponceau</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/poncelet">poncelet</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/poncey">poncey</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponchielli">ponchielli</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/poncho">poncho</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond">pond</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond-hockey">pond hockey</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond-life">pond life</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond-lily">pond lily</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond-scum">pond scum</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond-snail">pond snail</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond--the">pond, the</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond-apple">pond-apple</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pond-skater">pond-skater</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponded">ponded</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponder">ponder</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponderable">ponderable</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponderance">ponderance</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pondered">pondered</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/ponderer">ponderer</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/pondering">pondering</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/ponderosa">ponderosa</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/ponderosa-pine">ponderosa pine</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/ponderosity">ponderosity</a>
+                </li>
+                                <li class="visible query-word">
+                    <a href="http://www.dictionary.com/browse/ponderous">ponderous</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/ponderously">ponderously</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/pondicherry">pondicherry</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/ponding">ponding</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/pondo">pondo</a>
+                </li>
+                                <li class="visible">
+                    <a href="http://www.dictionary.com/browse/pondok">pondok</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pondoland">pondoland</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pondweed">pondweed</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pone">pone</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponerology">ponerology</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pones">pones</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pong">pong</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponga">ponga</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pongee">pongee</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pongid">pongid</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponging">ponging</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pongo">pongo</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/poniard">poniard</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponograph">ponograph</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponophobia">ponophobia</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pons">pons</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pons-asinorum">pons asinorum</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pons-varolii">pons varolii</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/ponselle">ponselle</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pont">pont</a>
+                </li>
+                                <li class="">
+                    <a href="http://www.dictionary.com/browse/pont-l-eveque">pont l'eveque</a>
+                </li>
+                            </ul>
+        </div>
+        <button type="button" class="nearby-move-button nearby-next"></button>
+    </div>
+</section>
+                <div class="rightRailBottomAd"></div>
+                    </div>
+            <div class="survey"  data-imp="4b238x">
+        <a href="https://dictionary.typeform.com/to/hbSmW9"  class="link"  target="_blank" data-linkid="4b238x" >Quick Survey</a>    </div>
+    </div>
+    <div class="row">
+        <div id="dcomSERPBottomLeaderBoard-728x90"><script type="text/javascript">if(typeof UserController !== "undefined" && !UserController.shouldDisplayAds()){document.getElementById("dcomSERPBottomLeaderBoard-728x90").parentNode.removeChild(document.getElementById("dcomSERPBottomLeaderBoard-728x90"));}else{gptApp.ads.push( function() {googletag.cmd.push(function() { googletag.display("dcomSERPBottomLeaderBoard-728x90"); });});}</script></div>    </div>
+</div>
+
+<footer class="footer-thin">
+    <div class="footer-container"  data-linkid='gy27eg'>
+        <div>
+            <ul class="footer-navbar">
+                <li class="footer-navbar-list">
+                    <a href="http://content.dictionary.com/">About</a>
+                </li>
+                <li class="footer-navbar-list">
+                    <a href="http://www.dictionary.com/terms">Terms</a>
+                </li>
+                <li class="footer-navbar-list">
+                    <a href="http://www.dictionary.com/privacy">Privacy</a>
+                </li>
+                <li class="footer-navbar-list">
+                    <a href="http://content.dictionary.com/about/careers">Careers</a>
+                </li>
+                <li class="footer-navbar-list">
+                    <a href="http://www.dictionary.com/apps">Apps</a>
+                </li>
+                <li class="footer-navbar-list">
+                    <a href="http://content.dictionary.com/about/contact">Contact Us</a>
+                </li>
+            </ul>
+            <div class="footer-copyright">
+                &copy;&nbsp;2016 Dictionary.com, LLC.
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="http://app.dictionary.com/js/advertisement.js"></script>
+<script>
+    if (typeof window.canRunAds === 'undefined') {
+        var img = new Image(),
+        url = 'http://track.dictionary.com/main.gif?ev=a&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=dic&st=dict&ab=&dc=desktop';
+
+        url = url.replace('%40%40REFERRER%40%40', encodeURIComponent(document.referrer))
+            .replace('%40%40CACHEBUSTER%40%40', Math.floor((Math.random() * 899999999) + 100000000))
+            .replace('%40%40MSEG%40%40', (cookiesManager.getCookieValue('mseg') || ''));
+        img.src = url;
+    }
+</script>
+<script>
+    /*
+     Below immediately function provide support for browsers, which do not support modern standards (https://dom.spec.whatwg.org/)
+     partially taken from: plainjs.com
+    */
+    (function (e) {
+        'use strict';
+        e.matches = e.matches ||
+            e.matchesSelector ||
+            e.webkitMatchesSelector ||
+            e.msMatchesSelector ||
+            function (selector) {
+                var node = this, nodes = (node.parentNode || node.document).querySelectorAll(selector), i = -1;
+                while (nodes[++i] && nodes[i] != node);
+                return !!nodes[i];
+            };
+        e.closest = e.closest || function (css) {
+                var node = this;
+                while (node) {
+                    if (node.matches(css)) return node;
+                    else node = node.parentElement;
+                }
+                return null;
+            };
+        e.hasClass = e.hasClass || function (className) {
+                var node = this;
+                return node.classList ? node.classList.contains(className) : new RegExp('\\b' + className + '\\b').test(node.className);
+            };
+        e.addClass = e.addClass || function (className) {
+                var node = this;
+                if (node.classList) node.classList.add(className);
+                else if (!node.hasClass(node, className)) node.className += ' ' + className;
+            };
+        e.removeClass = e.removeClass || function(className) {
+                var node = this;
+                if (node.classList) node.classList.remove(className);
+                else node.className = node.className.replace(new RegExp('\\b' + className + '\\b', 'g'), '');
+            };
+        e.on = e.on || function (event, selector, callback, context) {
+                var el = context || document;
+                el.addEventListener(event, function (e) {
+                    var found, el = e.target || e.srcElement;
+                    while (el && el.matches && el !== context && !(found = el.matches(selector))) el = el.parentElement;
+                    if (found) callback.call(this, el, e);
+                });
+            };
+    }(Element.prototype));
+</script><!-- Begin Quantcast Tag, part 2 -->
+<script type="text/javascript">
+if (typeof UserController === "undefined" || !UserController.isUnder13()) {
+    _qevents.push({qacct: "p-51zXP5Cc9sxvQ"});
+}
+</script>
+<noscript>
+<div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-51zXP5Cc9sxvQ.gif" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+<!-- End Quantcast Tag, part 2 --><script>
+    /*global $, pageName, window */
+
+    var BCT = (function () {
+        'use strict';
+
+        var webTrackURL = 'http://track.dictionary.com/main.gif?ev=c&cl=%40%40LINKIDS%40%40&ci=%40%40ITEM%40%40&co=%40%40ORDINAL%40%40&ms=%40%40MSEG%40%40&ds=%40%40DESTINATION%40%40&qr=%25%25QUERY%25%25&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop',
+            query, originalQuery;
+
+                    originalQuery = typeof DARCI.OQR !== 'undefined' ? DARCI.OQR.getValue() : null;
+            query =  originalQuery !== null ? originalQuery : "ponderous";
+
+            webTrackURL = webTrackURL.replace('%25%25QUERY%25%25', query);
+        
+        /**
+         * Returns data, which will be logged.
+         *
+         * NOTE:
+         * Possible, that empty array will be returned.
+         */
+        function getData(target) {
+            var ctsData,
+                closestLinkIDElement,
+                data = {};
+
+            ctsData = JSON.parse(target.getAttribute('data-cts'));
+            if (ctsData !== null) {
+                data.linkId = ctsData.linkId;
+                data.item = "";
+                data.ordinal = ctsData.ordinal;
+            } else {
+                closestLinkIDElement = target.closest('[data-linkid]');
+                if (null !== closestLinkIDElement && null === target.closest('[data-type]')) {
+                    data.linkId = closestLinkIDElement.getAttribute('data-linkid');
+                    data.ordinal = getOrdinal(target, closestLinkIDElement);
+                }
+            }
+            return data;
+        }
+
+        function getOrdinal(target, dataItem) {
+            var closestWithOrdinal,
+                value = '';
+
+            if (dataItem !== target) { // if element with linkid is not the anchor itself we are going deeper
+                closestWithOrdinal = target.closest('[data-ordinal]');
+                if (null !== closestWithOrdinal) {
+                    var links = closestWithOrdinal.querySelectorAll("a"),
+                        len = links.length;
+
+                    for (var i = 0; i < len; i++) {
+                        if (target === links[i]) {
+                            value = i + 1;
+                        }
+                    }
+                }
+            }
+            return value;
+        }
+
+        /**
+         * Returns data, which are generated always in the same way
+         */
+        function getCommonData(destination) {
+            var data = {};
+            data.cacheBuster = Math.floor((Math.random() * 899999999) + 100000000);
+            data.pageName = pageName;
+            data.mseg = getMsegValue();
+            data.destination = encodeURIComponent(destination);
+            return data;
+        }
+
+        /**
+         * Redirects user to destination
+         */
+        function redirectToDest(location) {
+            window.location = location;
+        }
+
+        /**
+         * Returns value of cookie based on name
+         */
+        function getCookieByName(name) {
+            var value = null,
+                cookies = document.cookie,
+                searchedCookie = cookies.indexOf(" " + name + "=");
+
+            // it's worth to check, if cookie is not first cookie
+            if (searchedCookie === -1) {
+                var checkFirstCookie = cookies.indexOf(name + "=");
+                searchedCookie = checkFirstCookie === 0 ? 0 : -1;
+            }
+
+            if (searchedCookie > -1) {
+                var startPositionOfValue = cookies.indexOf("=", searchedCookie) + 1,
+                    endPositionOfValue = cookies.indexOf(";", searchedCookie);
+
+                if (endPositionOfValue === -1) {
+                    endPositionOfValue = searchedCookie.length;
+                }
+
+                value = cookies.substring(startPositionOfValue,endPositionOfValue);
+            }
+
+            return value;
+        }
+
+        /**
+         * Returns value of mseg cookie
+         */
+        function getMsegValue() {
+            var msegVal;
+            if (typeof cookiesManager !== "undefined") {
+                msegVal = cookiesManager.getCookieValue("mseg");
+            } else {
+                msegVal = getCookieByName("mseg");
+            }
+
+            return msegVal || "";
+        }
+
+        /**
+         * Renders WebTrack URL
+         */
+        function renderWebTrackURL(data, destination) {
+            var commonData = getCommonData(destination);
+            return webTrackURL.replace('%40%40REFERRER%40%40', encodeURIComponent(document.referrer))
+                .replace('%40%40LINKIDS%40%40', data.linkId || "")
+                .replace('%40%40ITEM%40%40', data.item || "")
+                .replace('%40%40ORDINAL%40%40', data.ordinal || "")
+                .replace('%40%40CACHEBUSTER%40%40', commonData.cacheBuster || "")
+                .replace('%40%40PAGENAME%40%40', commonData.pageName || "")
+                .replace('%40%40MSEG%40%40', commonData.mseg || "")
+                .replace('%40%40DESTINATION%40%40', commonData.destination || "");
+        }
+
+        function logAndRedirect(data, destination) {
+            var logURL = renderWebTrackURL(data, destination),
+                image = new Image(),
+                timeout;
+
+            timeout = setTimeout(
+                function(){
+                    redirectToDest(destination);
+                },
+                2000
+            );
+
+            image.onload = image.onerror = function () {
+                clearTimeout(timeout);
+                redirectToDest(destination);
+            };
+
+            image.src = logURL;
+
+            return false;
+        }
+
+        /**
+         * Registers click event handler to body so it receives every click on anchor.
+         */
+        function attachHandler() {
+            var bodyTag = document.getElementsByTagName('body')[0];
+
+            bodyTag.on("click", 'a', function (elem, event) {
+                var target = event.target,
+                    enabled = target.closest('.cts-enabled'),
+                    disabled = target.closest('.cts-disabled'),
+                    destination = elem.getAttribute('href'),
+                    dataToLog;
+
+                if (typeof destination === "undefined") {
+                    return true;
+                }
+
+                if (target.hasClass('cts-clicked')) {
+                    return false;
+                }
+
+                //ACE-1060
+                if (disabled !== null && (enabled === null || disabled.childNodes.length < enabled.childNodes.length)) { return true }
+
+                dataToLog = getData(target);
+
+                // if object has no id it means that link shouldn't be tracked - follow the link
+                if (typeof dataToLog.linkId === "undefined") {
+                    return true;
+                }
+                event.preventDefault();
+
+                // mark this link as already clicked
+                target.addClass('cts-clicked');
+
+                return logAndRedirect(dataToLog, destination);
+            });
+        }
+
+        return {
+            attachHandler: attachHandler,
+            /**
+             * ::redirect() method is method used by oneClick module
+             */
+            redirect: function (ctsData, destinationHref, item) {
+                var data = {};
+                data.linkId = ctsData.linkId || ctsData.linkid;
+                data.item = item;
+                data.ordinal = '';
+                return logAndRedirect(data, destinationHref);
+            }
+        };
+    }());
+
+    /** Do the initial attachment to <body> links */
+    BCT.attachHandler();
+
+</script><script type="text/javascript" src="http://static.sfdict.com/app/js/require-37278.js"></script>
+<script type="text/javascript">
+    requirejs.config({
+            waitSeconds: 60,
+            baseUrl: "http://static.sfdict.com/dcom/js",
+            paths: {"appcore":"http:\/\/static.sfdict.com\/app\/js","options":"http:\/\/static.sfdict.com\/app\/js\/options-b826f","facebook":"http:\/\/connect.facebook.net\/en_US\/all","twitter":"https:\/\/platform.twitter.com\/widgets","instagram":"https:\/\/x.instagramfollowbutton.com\/follow","google-plus":"https:\/\/apis.google.com\/js\/platform","jquery":"http:\/\/static.sfdict.com\/app\/js\/jquery-1.11.3.min-25e73","page\/serp\/main":"page\/serp\/main-64246"},
+            shim: {"facebook":{"exports":"FB"},"twitter":{"exports":"twttr"},"instagram":[],"google-plus":{"exports":"googleplus"}}        });
+        define("runtime-options", function() {
+        return {"shortSerp":true,"definitionsLimit":5,"definitionsDisplayed":3,"wotdLink":"<a href=\"http:\/\/www.dictionary.com\/wordoftheday\/\"  class=\"word\"  id=\"wotd\" data-linkid=\"rpilnc\" >$$word$$<\/a>","flashAudioPlayerPath":"http:\/\/static.sfdict.com\/app\/flash\/player-d6fab.swf","isFavoriteURL":"http:\/\/app.dictionary.com\/favorites\/api\/getfavorites","addFavoriteURL":"http:\/\/app.dictionary.com\/favorites\/api\/addword","searchTerm":"ponderous","loginPageURL":"http:\/\/app.dictionary.com\/login\/core","clientPlatform":"Desktop","interstitialDashRenderApi":"http:\/\/app.dictionary.com\/api\/dash\/render\/ipadInterstitial\/dict_serp_ipadInterstitial","canonicalURL":"http:\/\/www.dictionary.com\/browse\/ponderous","pageName":"","wotdApiUrl":"http:\/\/restapi.dictionary.com\/api\/wordoftheday","pageType":"serp-short","variant":false,"collapseExpandSettings":{"luna":{"container":"#source-luna","types":{"def":{"name":"luna definitions","type":0,"desktop":{"visibleEntries":7,"condition":7},"mobile":{"visibleEntries":2,"condition":2}},"supEntry":{"name":"supplementary notes - entry-based elements","type":0,"desktop":{"visibleEntries":5,"condition":5},"mobile":{"visibleEntries":2,"condition":2}},"supText":{"name":"supplementary notes - textual elements","type":1,"desktop":{"visibleLines":5,"condition":5},"mobile":{"visibleLines":5,"condition":5}},"usgAlert":{"name":"usage alert - textual elements","type":1,"desktop":{"visibleLines":3,"condition":3},"mobile":{"visibleLines":3,"condition":3}}},"specCase":{"name":"special collapse expand for Luna Mobile","type":0,"mobile":{"visibleEntries":1,"condition":1}}},"idioms":{"container":"#source-ahdi2","types":{"cols":{"name":"idioms dictionary 2 cols list and text","type":3,"desktop":{"visibleLines":5,"condition":7}},"list":{"name":"idioms dictionary ordered list","type":4,"desktop":{"visibleLines":5,"condition":7}}}},"slang":{"container":"#source-das","types":{"def":{"name":"slang dictionary text based","type":5,"desktop":{"visibleLines":5,"condition":7}}}},"21century":{"container":"#source-dict21db","types":{"cent21_entry":{"name":"21st Century entry text","type":6,"desktop":{"visibleLines":5,"condition":7}}}},"abbreviations":{"container":"#source-ahabb2","types":{"abrreviations_entry":{"name":"abbreviations unordered list","type":7,"desktop":{"visibleEntries":3,"condition":5}}}},"collins":{"container":"#source-ced2","types":{"collins":{"name":"collins definitions","type":2,"desktop":{"entries":{"visibleEntries":3,"condition":5},"lines":{"visibleLines":10,"condition":12}}}}},"sentences":{"container":"#source-example-sentences","types":{"sentences_list":{"name":"example sentences list","type":8,"desktop":{"visibleList":3,"condition":4},"mobile":{"visibleList":3,"condition":4}}}}},"collapseExpandToggles":{"luna_entry":0,"luna_text":1,"idioms_cols":3,"idioms_list":4,"slang_text":5,"cent21_entry":6,"col_number":2,"ahabb2_list":7,"sentences_list":8},"CTSParams":{"infix":"","clkpage":"dic","clksite":"dict","clkld":0},"webTrack":{"clickInner":"http:\/\/track.dictionary.com\/main.gif?ev=n&tg=%40%40TARGET%40%40&ar=%40%40ADREFRESH%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","impressions":"http:\/\/track.dictionary.com\/main.gif?ev=i&lk=%40%40IMPRESSIONLINKIDS%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","pageview":"http:\/\/track.dictionary.com\/main.gif?ev=p&ct=%40%40CONTENTTITLE%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop","click":"http:\/\/track.dictionary.com\/main.gif?ev=c&cl=%40%40LINKIDS%40%40&ci=%40%40ITEM%40%40&co=%40%40ORDINAL%40%40&ms=%40%40MSEG%40%40&ds=%40%40DESTINATION%40%40&qr=%25%25QUERY%25%25&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=&dc=desktop"},"socialEvent":"{\"basePath\":\"http:\\\/\\\/track.dictionary.com\\\/track\\\/social\",\"attributes\":{\"site\":\"dict\",\"pageName\":\"dic\",\"ldid\":0}}"};
+    });
+    require(["page\/serp\/main"])
+</script>
+<script>
+    (function (factory) {
+        if (typeof require === 'function') {
+            require(['jquery'], factory);
+        } else {
+            factory($);
+        }
+    }(function($) {
+        var impressionLinkIds = {};
+        $('[data-imp]').each(function () {
+            if ($(this).is(':visible')) {
+                var imp = $(this).data('imp').toString().split('|', 2);
+                if (impressionLinkIds[imp[0]] === undefined) {
+                    impressionLinkIds[imp[0]] = 0;
+                }
+                if (imp[1] !== undefined) {
+                    impressionLinkIds[imp[0]] += parseInt(imp[1]);
+                } else {
+                    impressionLinkIds[imp[0]] += 1;
+                }
+            }
+        });
+
+        var lkValue = '';
+        for (var linkId in impressionLinkIds) {
+            lkValue += linkId + (impressionLinkIds[linkId] > 1 ? '|' + impressionLinkIds[linkId] : '') + ','
+        }
+        if (lkValue.slice(-1) === ',') {
+            lkValue = lkValue.slice(0, -1);
+        }
+        if (lkValue != '') {
+            var ms = (typeof ms === 'undefined') ? cookiesManager.getCookieValue('mseg') || "" : ms;
+            new Image().src = "http://track.dictionary.com/main.gif?ev=i&pn=dic&st=dict&ab=&dc=desktop&lk=" + lkValue + "&ms=" + ms + "&rf=" + encodeURIComponent(document.referrer) + "&cb=" + Math.floor((Math.random()*899999999)+100000000);
+        }
+    }));
+</script>
+    </body>
+    </html>
+
