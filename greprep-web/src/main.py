@@ -15,14 +15,22 @@
 # limitations under the License.
 #
 import webapp2, logging
-import vocab
 import os, sys
 
-rootdir = os.path.dirname(os.path.abspath(__file__))
-lib = os.path.join(rootdir, 'lib')
-sys.path.append(lib)
+def initialize():
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+    
+    rootdir = os.path.dirname(os.path.abspath(__file__))
+    lib = os.path.join(rootdir, 'lib')
+    sys.path.append(lib)
+    
+    logging.info("PYTHONPATH=" + str(sys.path))
 
-logging.info(str(sys.path))
+initialize()
+
+# BEGIN
+import vocab
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
