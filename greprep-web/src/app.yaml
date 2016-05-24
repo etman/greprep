@@ -13,6 +13,9 @@ handlers:
   static_files: web/index.html
   upload: web/index\.html
 
+- url: /web
+  static_dir: web
+
 - url: .*
   script: main.app
 
