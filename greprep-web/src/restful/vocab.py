@@ -4,9 +4,21 @@ from google.appengine.api import memcache
 from words.dictref import *
 
 class VocabListResourceHandler(webapp2.RequestHandler):
-    def get(self):
-        with open("data/majortests.json") as f:
-            self.response.write(f.read())
+    def get(self, offset=0, length=10):
+        defs = memcache.get("def:vocab-list")
+        if defs is None:
+            with open("data/majortests.json") as f:
+                defs = json.load(f)
+                
+            def toMap(k):
+                return {
+                    "word": k,
+                    "definition": defs.get(k)
+                }
+            defs = [toMap(k) for k in defs.keys()]
+            memcache.add("def:vocab-list", defs, 86400 * 15)
+        
+        return webapp2.Response(json.dumps(defs[offset:length]))
 
     def delete(self):
         logging.info("HTTP Delete called")

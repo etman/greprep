@@ -77,7 +77,11 @@ body { padding-top: 70px; }
 	<script src="https://cdn.jsdelivr.net/riot/2.4/riot+compiler.min.js"></script>
 	<script type="riot/tag" src="web/vocab-list.tag"></script>
 	<script>
-	riot.mount('vocab-list')
+	riot.compile(function() {
+		riot.route.base('/')
+		riot.mount('*')
+		riot.route.start(true)
+	})
 	</script>
 </body>
 </html>
