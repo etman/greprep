@@ -14,7 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import webapp2
+import webapp2, logging
+import os, sys
+
+def initialize():
+    reload(sys)
+    sys.setdefaultencoding('utf8')
+    
+    moduleDirs = ["lib", "restful"]
+    rootdir = os.path.dirname(os.path.abspath(__file__))
+    sys.path = sys.path + [os.path.join(rootdir, dir) for dir in moduleDirs]
+
+initialize()
+
+# BEGIN
 import vocab
 
 class MainHandler(webapp2.RequestHandler):
@@ -23,5 +36,6 @@ class MainHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/vocab', vocab.VocabResourceHandler)
+    ('/api/vocab', vocab.VocabListResourceHandler),
+    webapp2.Route(r'/api/vocab/<word:.*>', handler=vocab.VocabResourceHandler)
 ], debug=True)

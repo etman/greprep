@@ -1,8 +1,4 @@
 # encoding=utf8
-import sys  
-
-reload(sys)  
-sys.setdefaultencoding('utf8')
 from commons import *
 import re
 
@@ -33,6 +29,7 @@ def lookupDictionaryCom(word, getSource=httpGet):
         return items
 
     def collectPronunciations(items, tag):
+        tag["controls"] = True
         items.append(str(tag).strip("\r\n "))
         return items
     
