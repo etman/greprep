@@ -1,4 +1,3 @@
-
 import webapp2, logging
 from google.appengine.api import memcache
 from words.dictref import *
