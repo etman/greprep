@@ -27,3 +27,9 @@ def loadResource(pathname_suffix):
         return filter(os.path.exists, cands)[0]
     except IndexError:
         return None
+
+def numerize(value, defaultValue):
+    try:
+        return int(value)
+    except:
+        return int(defaultValue)

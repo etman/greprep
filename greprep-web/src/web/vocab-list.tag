@@ -1,29 +1,46 @@
 <vocab-list>
 <div class="col-md-7">
 	<div class="row vocab-listing-heading">
-		<div class="col-md-2"><h4>Vocabulary</h4></div>
-		<div class="col-md-9"><h4>Definition</h4></div>
+		<div class="col-md-2">
+			<h4>Vocabulary</h4>
+		</div>
+		<div class="col-md-9">
+			<h4>Definition</h4>
+		</div>
 	</div>
-	<div class="row" each={ vocabs }>
+	<div class="row" each="{ vocabs }">
 		<div class="col-md-2">{ word }</div>
 		<div class="col-md-9">{ definition }</div>
 		<div class="col-md-1">
-			<img src="/web/images/dictcom.png" class="icon_img" onclick={ parent.lookUpDictCom } />
+			<img src="/web/images/dictcom.png" class="icon_img"
+				onclick="{ parent.lookUpDictCom }" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<nav>
+				<ul class="pager">
+					<li class="previous"><a href="#"><span aria-hidden="true">&larr;</span>
+							Previous</a></li>
+					<li class="next"><a href="#">Next<span aria-hidden="true">&rarr;</span></a></li>
+				</ul>
+			</nav>
 		</div>
 	</div>
 </div>
-<div class="col-md-5 vocab-def-block">
-</div>
+<div class="col-md-5 vocab-def-block"></div>
 <style>
 .icon_img {
 	width: 25px;
 	height: 25px;
 }
+
 .vocab-def-block {
 	border-left-width: thin;
 	border-left-style: dashed;
 	border-left-color: blue;
 }
+
 .vocab-listing-heading {
 	border-bottom-width: thin;
 	border-bottom-style: dashed;
@@ -45,5 +62,5 @@
 			self.vocabs.push(data[i]);
 		self.update();
 	}, "json");
-</script>
+</script> <br />
 </vocab-list>
